@@ -1,13 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial;
 }
 
-p {
-    font-weight: 700;
-    text-align: justify;
-    font-size: 1.7vmin;
+:root {
+    --colorPrimary: #ca0030;
+}
+
+body {
+    background-color: #000;
 }
 
 section {
@@ -15,36 +16,70 @@ section {
     height: auto;
 }
 
-.main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.main > div {
+section > .content{
     width: 100%;
     height: auto;
-    margin: 0rem 10vw;
+    display: flex;
+    background: url("img/htmlLang.jpg") center no-repeat;
+    background-size: calc(100% + 80rem) calc(100vh);
 }
 
-@media screen and (max-width: 720px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-    }
+section > .content > .main {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    padding: 20px 0;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+}
 
-    .main > .content {
-        width: 100%;
-        height: 40vh;
-        display: flex;
-        padding: 2vmin 0rem;
-        flex-direction: column;
-        justify-content: center;
-    }
+section > .content > .main::before {
+    top: 0;
+    z-index: 1;
+    z-index: 5;
+    width: 100%;
+    content: "";
+    height: 1rem;
+    position: absolute;
+    background-color: var(--colorPrimary);
+} 
 
-    .main > .content > div {
-        margin: 10vmax auto;
-    }
+section > .content > .main::after {
+    bottom: 0;
+    z-index: 5;
+    z-index: 1;
+    width: 100%;
+    content: "";
+    height: .5rem;
+    position: absolute;
+    background-color: var(--colorPrimary);
+}
+
+section > .content > .main > .imgPerfil {
+    width: 20vmax;
+    height: 20vmax;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10rem;
+    border: 7px var(--colorPrimary) solid;
+}
+
+section > .content > .main > .imgPerfil img {
+    width: 100%;
+    height: auto;
+}
+
+section > .content > .main > .social {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section > .content > .main > .social  div {
+    margin: 5rem 1rem;
 }
