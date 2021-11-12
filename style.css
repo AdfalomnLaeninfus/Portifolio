@@ -63,7 +63,7 @@ section > .content > .main > .imgPerfil {
     height: 20vmax;
     display: flex;
     overflow: hidden;
-    border-radius: 300px;
+    border-radius: 100%;
     border: 7px var(--colorPrimary) solid;
 }
 
