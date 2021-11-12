@@ -59,8 +59,8 @@ section > .content > .main::after {
 }
 
 section > .content > .main > .imgPerfil {
-    width: 20vmax;
-    height: 20vmax;
+    width: 15vmax;
+    height: 15vmax;
     display: flex;
     overflow: hidden;
     border-radius: 100%;
@@ -81,5 +81,22 @@ section > .content > .main > .social {
 }
 
 section > .content > .main > .social  div {
-    margin: 5rem 1rem;
+    margin: 2rem 1rem;
+}
+
+section > .content > .main > .sobre {
+    width: 50%;
+    height: auto;
+    display: block;
+    color: #FFFFFF;
+    margin: 1rem auto;
+    align-items: center;
+}
+
+section > .content > .main > .sobre > p {
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    font-family: Arial;
+    text-align: justify;
 }
