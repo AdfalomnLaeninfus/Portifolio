@@ -1,102 +1,105 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial;
+    font-size: 1.5vw;
 }
 
 :root {
-    --colorPrimary: #ca0030;
+    --primaryColor: rgb(255, 0, 0);
 }
 
 body {
-    background-color: #000;
-}
-
-section {
     width: 100%;
     height: auto;
+    overflow: hidden;
+    background-color: #3c3c3c;
 }
 
-section > .content{
+section.main {
     width: 100%;
     height: auto;
-    display: flex;
-    background: url("img/htmlLang.jpg") center no-repeat;
-    background-size: calc(100% + 80rem) calc(100vh);
-}
-
-section > .content > .main {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    padding: 20px 0;
     position: relative;
+    background: url("./img/htmlLang.jpg") no-repeat;
+    background-size: cover;
+}
+
+section.main > .content {
+    width: 100%;
+    height: auto;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    background: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .7);
 }
 
-section > .content > .main::before {
+section.main::before {
     top: 0;
-    z-index: 1;
-    z-index: 5;
-    width: 100%;
     content: "";
-    height: 1rem;
-    position: absolute;
-    background-color: var(--colorPrimary);
-} 
-
-section > .content > .main::after {
-    bottom: 0;
-    z-index: 5;
-    z-index: 1;
     width: 100%;
-    content: "";
-    height: .5rem;
+    height: .8em;
     position: absolute;
-    background-color: var(--colorPrimary);
+    background-color: var(--primaryColor);
 }
 
-section > .content > .main > .imgPerfil {
-    width: 15vmax;
-    height: 15vmax;
-    display: flex;
+section.main::after {
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: .5em;
+    position: absolute;
+    background-color: var(--primaryColor);
+}
+
+section.main > .content > .imgPerfil {
+    width: 12vw;
+    height: auto;
+    margin: 2em 0em;
     overflow: hidden;
     border-radius: 100%;
-    border: 7px var(--colorPrimary) solid;
+    border: .7vmin solid var(--primaryColor);
 }
 
-section > .content > .main > .imgPerfil img {
+section.main > .content > .imgPerfil > img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.2);
+}
+
+.perfil {
+    color: #FFFFFF;
     width: 100%;
     height: auto;
 }
 
-section > .content > .main > .social {
+.perfil > p {
+    padding: 1rem 13rem;
+}
+
+.linguagensProgramacao {
     width: 100%;
     height: auto;
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-section > .content > .main > .social  div {
-    margin: 2rem 1rem;
+.linguagensProgramacao > img {
+    margin: 0em .4em;
 }
 
-section > .content > .main > .sobre {
-    width: 50%;
-    height: auto;
-    display: block;
-    color: #FFFFFF;
-    margin: 1rem auto;
-    align-items: center;
-}
+@media  screen and (max-width: 700px) {
+    .linguagensProgramacao {
+        width: 50%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-section > .content > .main > .sobre > p {
-    width: 100%;
-    height: auto;
-    font-size: 1.5rem;
-    font-family: Arial;
-    text-align: justify;
+    .linguagensProgramacao > img {
+        width: 10vw;
+        height: auto;
+        margin: .3em 0em;
+    }
 }
