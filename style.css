@@ -2,104 +2,121 @@
     margin: 0;
     padding: 0;
     font-family: Arial;
-    font-size: 1.5vw;
 }
 
 :root {
-    --primaryColor: rgb(255, 0, 0);
+    --corPrimaria: #FF5959;
+    --corSegundaria: #D382A9;
+    --corTerciaria: #83819F;
+    --corQuaternaria: #25242D;
 }
 
 body {
-    width: 100%;
-    height: auto;
     overflow: hidden;
-    background-color: #3c3c3c;
+    background-color: var(--corQuaternaria);
 }
 
-section.main {
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
     width: 100%;
     height: auto;
+    display: flex;
+    padding: 2em 0em;
+    overflow: hidden;
     position: relative;
-    background: url("./img/htmlLang.jpg") no-repeat;
-    background-size: cover;
-}
-
-section.main > .content {
-    width: 100%;
-    height: auto;
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, .7);
+    border-bottom: 3px solid var(--corPrimaria);
 }
 
-section.main::before {
-    top: 0;
-    content: "";
-    width: 100%;
-    height: .8em;
-    position: absolute;
-    background-color: var(--primaryColor);
+nav > .logo {
+    position: relative;
+    left: 5em;
 }
 
-section.main::after {
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: .5em;
-    position: absolute;
-    background-color: var(--primaryColor);
+nav > .logo > div {
+    display: none;
 }
 
-section.main > .content > .imgPerfil {
-    width: 12vw;
-    height: auto;
-    margin: 2em 0em;
-    overflow: hidden;
-    border-radius: 100%;
-    border: .7vmin solid var(--primaryColor);
-}
-
-section.main > .content > .imgPerfil > img {
-    width: 100%;
-    height: auto;
-    transform: scale(1.2);
-}
-
-.perfil {
+nav > .logo > h3 {
     color: #FFFFFF;
-    width: 100%;
-    height: auto;
+    font-size: 2vmin;
 }
 
-.perfil > p {
-    padding: 1rem 13rem;
-}
-
-.linguagensProgramacao {
-    width: 100%;
-    height: auto;
-    padding: 1em;
+nav > ul {
+    right: 3em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    list-style: none;
+    position: absolute;
 }
 
-.linguagensProgramacao > img {
-    margin: 0em .4em;
+nav > ul > li {
+    padding: 1em;
+    transition: ease-out 1s;
 }
 
-@media  screen and (max-width: 700px) {
-    .linguagensProgramacao {
-        width: 50%;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(3, 1fr);
+nav > ul > li:hover {
+    transition: ease-in-out 1s;
+    background-color: var(--corSegundaria);
+}
+
+nav > ul > li > a {
+    color: #FFFFFF;
+    font-size: 2vmin;
+}
+
+nav > ul > li:hover > a {
+    color: var(--corQuaternaria);
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        justify-content: center;
+        flex-direction: column;
     }
 
-    .linguagensProgramacao > img {
-        width: 10vw;
+    nav > .logo {
+        left: 0;
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding: 2em 0em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav > .logo > h3 {
+        font-size: 1.5vmax;
+    }
+
+    nav > .logo > div {
+        right: 80px;
+        display: flex;
+        cursor: pointer;
+        color: #FFFFFF;
+        position: absolute;
+    }
+
+    nav > ul {
+        right: 0;
+        width: 100%;
+        display: none;
+        position: static;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav > ul > li {
+        width: 100%;
         height: auto;
-        margin: .3em 0em;
+        text-align: center;
+        margin-top: -250px;
+        border-style: solid solid none none;
+        border-color: var(--corPrimaria) var(--corPrimaria);
     }
 }

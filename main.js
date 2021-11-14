@@ -1,0 +1,1 @@
+const menuButtonHide = document.getElementById();
