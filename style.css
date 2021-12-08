@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial;
     font-size: 1.2vw;
+    font-family: Arial;
 }
 
 :root {
@@ -28,7 +28,6 @@ nav {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: space-evenly;
     background-color: var(--corQuaternaria);
 }
 
@@ -56,24 +55,30 @@ nav > div:nth-child(2) {
 }
 
 nav > div:nth-child(2) > ul {
-    width: 50%;
-    height: auto;
+    top: 40%;
+    right: 3rem;
     display: flex;
     list-style: none;
+    position: absolute;
+    align-items: center;
+    transition: 1s;
 }
 
 nav > div:nth-child(2) > ul > li {
-    width: 100%;
     height: auto;
     text-align: center;
 }
 
 nav > div:nth-child(2) > ul > li > a {
-    width: 2rem;
+    width: 100%;
     height: auto;
     padding: 1.4rem;
 }
 
 nav > div:nth-child(2) > ul > li > a:hover {
-    background-color: var(--corTerciaria);
+    transition: 1s;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--corQuaternaria);
+    background-color: var(--corPrimaria);
 }
