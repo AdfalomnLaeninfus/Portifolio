@@ -53,7 +53,7 @@ a {
     pointer-events: none;
     position: absolute;
     border-radius: 100%;
-    background: #FFFFFF;
+    background: #FFBABA;
     mix-blend-mode: difference;
 }
 
